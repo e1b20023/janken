@@ -21,4 +21,16 @@ public class JankenController {
     return "janken.html";
   }
 
+  @GetMapping("/choice/{param1}")
+  public String choice(@PathVariable String param1, ModelMap model) {
+    if (param1.equals("グー")) {
+      model.addAttribute("gu", param1);
+    } else if (param1.equals("チョキ")) {
+      model.addAttribute("choki", param1);
+    } else {
+      model.addAttribute("pa", param1);
+    }
+    return "janken.html";
+  }
+
 }
