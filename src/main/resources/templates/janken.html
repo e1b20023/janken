@@ -13,6 +13,27 @@
     </div>
   </h1>
   <p>あなたの出す手を選んでください</p>
+  <div>
+    <a href="/choice/グー">グー</a>
+    <a href="/choice/チョキ">チョキ</a>
+    <a href="/choice/パー">パー</a>
+  </div>
+  <p />
+  <div th:if="${gu}">
+    <p>あなたの手：[[${gu}]]</p>
+    <p>相手の手：グー</p>
+    <p>結果：あいこ</p>
+  </div>
+  <div th:if="${choki}">
+    <p>あなたの手：[[${choki}]]</p>
+    <p>相手の手：グー</p>
+    <p>結果：負け</p>
+  </div>
+  <div th:if="${pa}">
+    <p>あなたの手：[[${pa}]]</p>
+    <p>相手の手：グー</p>
+    <p>結果：勝ち</p>
+  </div>
 </body>
 
 </html>
