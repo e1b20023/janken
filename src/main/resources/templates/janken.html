@@ -12,6 +12,9 @@
       Hi [[${name}]]
     </div>
   </h1>
+
+  <a href="/logout">ログアウト</a>
+
   <p>あなたの出す手を選んでください</p>
   <div>
     <a href="/choice/グー">グー</a>
@@ -33,6 +36,15 @@
     <p>あなたの手：[[${pa}]]</p>
     <p>相手の手：グー</p>
     <p>結果：勝ち</p>
+  </div>
+
+  <div th:if="${room}">
+    エントリー
+    <ul>
+      <!--roomオブジェクトのroomNoというフィールドを指定している-->
+      <li>RoomNo:[[${room.roomNo}]]</li>
+      <li th:each="user : ${room.users}">[[${user}]]</li>
+    </ul>
   </div>
 </body>
 
