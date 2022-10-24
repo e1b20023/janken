@@ -18,8 +18,6 @@
   <div th:if="${room}">
     エントリー
     <ul>
-      <!--roomオブジェクトのroomNoというフィールドを指定している-->
-      <li>RoomNo:[[${room.roomNo}]]</li>
       <li th:each="user : ${room.users}">[[${user}]]</li>
     </ul>
   </div>
